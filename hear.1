@@ -1,4 +1,4 @@
-.Dd November 9, 2025
+.Dd November 21, 2025
 .Dt HEAR 1
 .Os Darwin
 .Sh NAME
@@ -14,11 +14,10 @@
 .Op Fl n Ar input_device_id
 .Sh DESCRIPTION
 .Nm
-is a command line interface for the built-in speech recognition
-capabilities in macOS. It supports transcription of both audio files
-and microphone input. If no input file is provided, the default behaviour
-is to transcribe from the default audio input device, typically the
-microphone.
+is a command line interface for the built-in speech recognition capabilities in
+macOS. It supports transcription of both audio files and data from audio input
+devices. If no input file is provided, the default behaviour is to transcribe
+from the default audio input device, typically the microphone.
 .Pp
 The following flags are supported:
 .Bl -tag -width -indent
@@ -48,7 +47,8 @@ Enable subtitle mode, producing .srt output (file input only, experimental)
 Set exit word. This causes the program to exit when a speech recognition result
 ends with the specified word.
 .It Fl t -timeout Ar seconds
-Exit if no recognition results are received within the specified number of seconds.
+Exit if no recognition results are received within the specified number of
+seconds.
 .It Fl a -audio-input-devices
 List available audio input devices and exit.
 .It Fl n --input-device-id
@@ -61,7 +61,7 @@ Print program name and version, and exit.
 .Pp
 Returns 0 on success and greater than 0 on error or failure.
 .Sh SEE ALSO
-.Xr afplay 1
+.Xr afplay 1 ,
 .Xr say 1
 .Sh AUTHORS
 .An Sveinbjorn Thordarson <sveinbjorn@sveinbjorn.org>
