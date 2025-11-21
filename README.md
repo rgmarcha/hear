@@ -1,4 +1,4 @@
-[![macOS](https://img.shields.io/badge/macOS-000000?style=flat&logo=apple&logoColor=white)]()
+[![macOS](https://img.shields.io/badge/macOS-000000?style=flat&logo=apple&logoColor=white)](https://en.wikipedia.org/wiki/MacOS)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![Language](https://img.shields.io/badge/language-objective--c-lightgrey)](https://en.wikipedia.org/wiki/Objective-C)
 [![Release](https://shields.io/github/v/release/sveinbjornt/hear?display_name=tag)](https://github.com/sveinbjornt/hear/releases)
@@ -40,15 +40,16 @@ After downloading and expanding the archive, change to the resulting directory a
 the following command:
 
 ```bash
-bash install.sh
+sudo bash install.sh
 ```
 
-This will install the binary into `/usr/local/bin` and the man page into
-`/usr/local/share/man/man1/`.
+By default, this will install the binary into `/usr/local/bin` and the 
+man page into `/usr/local/share/man/man1/`.
 
 ### Install via Homebrew
 
-A full installation of [Xcode](https://developer.apple.com/xcode/resources/) is required to build `hear` via Homebrew.
+A full installation of [Xcode](https://developer.apple.com/xcode/resources/) is required
+to build `hear` via Homebrew.
 
 ```bash
 brew tap sveinbjornt/hear https://github.com/sveinbjornt/hear
@@ -105,7 +106,7 @@ bash test/test.sh
 
 If running the binary leads to an abort signal, try running the binary by
 right-clicking it and selecting Open. This should automatically open the
-binary with the regular Terminal app and prompt you to grant the required
+binary with the your terminal client and prompt you to grant the required
 permissions.
 
 ## BSD License

@@ -1,4 +1,4 @@
-# hear version history
+# `hear` version history
 
 ## v0.7 - 09/11/2025
 
