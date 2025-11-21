@@ -23,3 +23,9 @@ jobs:
       - name: Run tests
         run: |
           make runtests
+      - name: Install shellcheck
+        run: |
+          HOMEBREW_NO_AUTO_UPDATE=1 brew install shellcheck
+      - name: Run shellcheck
+        run: |
+          shellcheck *.sh
