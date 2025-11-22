@@ -31,6 +31,12 @@ MP3_PATH="$TEST_ROOT/en-US.mp3"
 test_transcribe_file $MP3_PATH $LOCALE "$EXPECTED_OUTPUT"
 echo "[OK] MP3 en-US speech recognition"
 
+# Audio with percentage
+EXPECTED_OUTPUT="I have to say that's really incredible it is 60% off"
+AAC_PATH="$TEST_ROOT/long-audio-percentage.aac"
+test_transcribe_file $AAC_PATH $LOCALE "$EXPECTED_OUTPUT"
+echo "[OK] AAC en-US speech recognition on text including word percentage"
+
 # fr-FR
 EXPECTED_OUTPUT="Ça soir je vais à la maison"
 LOCALE="fr-FR"
