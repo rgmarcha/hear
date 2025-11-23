@@ -215,14 +215,17 @@
             NSDump([NSString stringWithFormat:@"%.2f --> %.2f\n", start, end]);
         }
         
+        // Default format string
+        NSString *fmtStr = @"%@";
+        
         // Make sure there's a space between the incoming result strings
         NSString *s = result.bestTranscription.formattedString;
         if ([s hasSuffix:@" "] == FALSE && !result.isFinal) {
-            s = [NSString stringWithFormat:@"%@ ", s];
+            fmtStr = @"%@ ";
         }
         
         // Print to stdout without newline and flush
-        NSDump(s);
+        NSDump(fmtStr, s);
         
         if (self.addTimestamps) {
             NSDump(@"\n");
@@ -381,10 +384,9 @@
         NSString *transcript = result.bestTranscription.formattedString;
         if (self.singleLineMode) {
             // Erase current line and move cursor to the start of the line before printing
-            NSString *s = [NSString stringWithFormat:@"\33[2K\r%@", transcript];
-            NSDump(s);
+            NSDump(@"\33[2K\r%@", transcript);
         } else {
-            NSPrint(transcript);
+            NSPrint(@"%@", transcript);
         }
         
         // If an exit word has been set, check if result ends with it
